@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Construcción</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Empresa Construcciones Quin</a>
+</nav>
+<div class="container mt-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Gestión del Personal</h1>
+        <p class="lead">Por favor complete el formulario de registro para ingresar sus datos al sistema y mantener un control preciso de los accesos a la obra. </p>
+    </div>
+
+    <div class="row" id="usuarios">
+        <!-- Listado de Usuarios -->
+    </div>
+
+    <div class="card mt-5">
+        <div class="card-header">
+            Agregar Usuario
+        </div>
+        <div class="card-body">
+            <form id="formularioUsuario">
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="FechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="Correo">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="Cargo">Cargo</label>
+                    <select class="form-control" id="cargo" required>
+                        <option>Ingeniero</option>
+                        <option>Arquitecto</option>
+                        <option>Obrero</option>
+                        <option>Supervisor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="FechaIngreso">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="fechaIngreso" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmación -->
+<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-labelledby="modalConfirmacionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalConfirmacionLabel">Confirmar Datos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Detalles de confirmación -->
+                <ul id="detalleConfirmacion" class="list-unstyled">
+                    <li><strong>Nombre:</strong> <span id="confNombre"></span></li>
+                    <li><strong>Apellido:</strong> <span id="confApellido"></span></li>
+                    <li><strong>Correo:</strong> <span id="confCorreo"></span></li>
+                    <li><strong>Cargo:</strong> <span id="confCargo"></span></li>
+                    <li><strong>Fecha de Ingreso:</strong> <span id="confFechaIngreso"></span></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="botonConfirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+<footer style="text-align: center; font-style: italic">
+    <p>"Construcciones Quin" © 2024.</p>
+</footer>
+</html>
+
+
+
